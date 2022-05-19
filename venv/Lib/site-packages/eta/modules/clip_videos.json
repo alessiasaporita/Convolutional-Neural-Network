@@ -1,0 +1,52 @@
+{
+    "info": {
+        "name": "clip_videos",
+        "type": "eta.core.types.Module",
+        "version": "0.1.0",
+        "description": "A module for generating clips from a video",
+        "exe": "clip_videos.py"
+    },
+    "inputs": [
+        {
+            "name": "input_path",
+            "type": "eta.core.types.Video",
+            "description": "The input video",
+            "required": true
+        },
+        {
+            "name": "frame_ranges_path",
+            "type": "eta.core.types.FrameRanges",
+            "description": "A FrameRanges instance specifying the clips to generate",
+            "required": false
+        }
+    ],
+    "outputs": [
+        {
+            "name": "output_video_clips_path",
+            "type": "eta.core.types.VideoClips",
+            "description": "The output video clips",
+            "required": false
+        },
+        {
+            "name": "output_frames_dir",
+            "type": "eta.core.types.ImageSequenceDirectory",
+            "description": "A directory in which to write the sampled frames",
+            "required": false
+        },
+        {
+            "name": "output_frames_path",
+            "type": "eta.core.types.ImageSequence",
+            "description": "The output sampled frames",
+            "required": false
+        }
+    ],
+    "parameters": [
+        {
+            "name": "frames",
+            "type": "eta.core.types.String",
+            "description": "A frames string specifying the clips to generate",
+            "required": false,
+            "default": null
+        }
+    ]
+}

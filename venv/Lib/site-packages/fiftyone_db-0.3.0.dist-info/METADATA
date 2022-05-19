@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fiftyone-db
+Version: 0.3.0
+Summary: FiftyOne DB
+Home-page: https://github.com/voxel51/fiftyone
+Author: Voxel51, Inc.
+Author-email: info@voxel51.com
+License: Apache
+Platform: UNKNOWN
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+Supporting package for [FiftyOne](https://pypi.org/project/fiftyone)
+
+

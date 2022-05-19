@@ -1,0 +1,7 @@
+{
+    "vector_path": "{{eta-resources}}/voxel51-logo.pdf",
+    "raster_path": "{{eta-resources}}/voxel51-logo-600dpi.png",
+    "width": "8%",
+    "gap": "1%",
+    "loc": "top-right"
+}

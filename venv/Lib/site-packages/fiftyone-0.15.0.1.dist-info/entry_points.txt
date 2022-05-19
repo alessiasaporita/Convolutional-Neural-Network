@@ -1,0 +1,2 @@
+[console_scripts]
+fiftyone = fiftyone.core.cli:main

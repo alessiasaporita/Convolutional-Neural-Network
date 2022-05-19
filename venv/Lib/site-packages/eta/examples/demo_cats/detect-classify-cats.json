@@ -1,0 +1,37 @@
+{
+    "pipeline": "detect_and_classify_images",
+    "inputs": {
+        "images_dir": "../data/cats"
+    },
+    "outputs": {
+        "image_set_labels": "out/cats-labels.json",
+        "annotated_images_dir": "out/cats-annotated"
+    },
+    "parameters": {
+        "apply_object_detector.detector": {
+            "type": "eta.detectors.TFModelsDetector",
+            "config": {
+                "model_name": "ssd-resnet50-fpn-coco"
+            }
+        },
+        "apply_object_detector.objects": [
+            {
+                "labels": ["cat"],
+                "threshold": null
+            }
+        ],
+        "apply_image_classifier.classifier": {
+            "type": "eta.classifiers.TFSlimClassifier",
+            "config": {
+                "model_name": "mobilenet-v2-imagenet",
+                "attr_name": "label"
+            }
+        },
+        "apply_image_classifier.confidence_threshold": null,
+        "visualize_image_labels.annotation_config": {
+            "show_all_confidences": true,
+            "font_size": 12,
+            "linewidth": 1
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "video_path": "../data/water-20frames/%05d.png",
+            "backing_dir": "out/eta-backing/embed/1"
+        },
+        {
+            "video_path": "../data/water-20frames/%05d.png",
+            "backing_dir": "out/eta-backing/embed/2"
+        }
+    ],
+    "parameters": {
+        "crop_box": {
+            "top_left": {
+                "x": 0.1,
+                "y": 0.1
+            },
+            "bottom_right": {
+                "x": 0.6,
+                "y": 0.4
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+venv/Lib/site-packages/torch/lib/torch_cpu.dll
+Main/Data/cifar-100-python.tar.gz
+Main/Data/cifar-100-python/train
+venv/Lib/site-packages/kaleido/executable/bin/kaleido.exe
+venv/Lib/site-packages/torch/lib/dnnl.lib
+Test/Data/cifar-100-python/train
+Test/Data/cifar-100-python.tar.gz

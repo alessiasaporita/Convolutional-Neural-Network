@@ -1,0 +1,29 @@
+{
+    "pipeline": "object_detector",
+    "inputs": {
+        "video": "../data/people.mp4"
+    },
+    "outputs": {
+        "labels": "out/people-labels.json",
+        "annotated_video": "out/people-annotated.mp4"
+    },
+    "parameters": {
+        "apply_object_detector.detector": {
+            "type": "eta.detectors.TFModelsDetector",
+            "config": {
+                "model_name": "faster-rcnn-resnet50-coco",
+                "generate_class_probs": true
+            }
+        },
+        "apply_object_detector.objects": [
+            {
+                "labels": ["person"],
+                "threshold": 0.5
+            }
+        ],
+        "apply_object_detector.record_top_k_probs": 5,
+        "visualize_labels.annotation_config": {
+            "show_all_confidences": true
+        }
+    }
+}

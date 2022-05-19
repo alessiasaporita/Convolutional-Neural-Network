@@ -1,0 +1,15 @@
+{
+    "video_path": "../data/water-20frames/%05d.png",
+    "caching_video_featurizer": {
+        "frame_featurizer": {
+            "type": "eta.core.vgg16.VGG16Featurizer"
+        },
+        "backing_manager": {
+            "type": "eta.core.features.ManualBackingManager",
+            "config": {
+                "backing_dir": "out/eta-backing"
+            }
+        },
+        "delete_backing_directory": false
+    }
+}

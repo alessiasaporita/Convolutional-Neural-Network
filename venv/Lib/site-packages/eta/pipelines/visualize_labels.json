@@ -1,0 +1,40 @@
+{
+    "info": {
+        "name": "visualize_labels",
+        "type": "eta.core.types.Pipeline",
+        "version": "0.2",
+        "description": "A pipeline for visualizing labels on a video"
+    },
+    "inputs": ["video", "video_labels"],
+    "outputs": ["annotated_video"],
+    "modules": {
+        "format_videos": {
+            "name": "format_videos",
+            "tunable_parameters": ["size", "max_size", "ffmpeg_out_opts"],
+            "set_parameters": {}
+        },
+        "visualize_labels": {
+            "name": "visualize_labels",
+            "tunable_parameters": ["annotation_config"],
+            "set_parameters": {}
+        }
+    },
+    "connections": [
+        {
+            "source": "INPUT.video",
+            "sink": "format_videos.input_path"
+        },
+        {
+            "source": "format_videos.output_video_path",
+            "sink": "visualize_labels.video_path"
+        },
+        {
+            "source": "INPUT.video_labels",
+            "sink": "visualize_labels.video_labels_path"
+        },
+        {
+            "source": "visualize_labels.output_path",
+            "sink": "OUTPUT.annotated_video"
+        }
+    ]
+}

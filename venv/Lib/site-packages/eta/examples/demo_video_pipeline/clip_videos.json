@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "input_path": "out/water-5fps-512w.mp4",
+            "output_video_clips_path": "out/water-5fps-512w-%05d-%05d.mp4"
+        }
+    ],
+    "parameters": {
+        "frames": "1-10,20-30"
+    }
+}

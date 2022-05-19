@@ -1,0 +1,46 @@
+{
+    "info": {
+        "name": "visualize_labels",
+        "type": "eta.core.types.Module",
+        "version": "0.1.0",
+        "description": "A module for visualizing labeled videos",
+        "exe": "visualize_labels.py"
+    },
+    "inputs": [
+        {
+            "name": "video_path",
+            "type": "eta.core.types.Video",
+            "description": "A video",
+            "required": true
+        },
+        {
+            "name": "video_labels_path",
+            "type": "eta.core.types.VideoLabels",
+            "description": "A JSON file containing the video labels",
+            "required": false
+        },
+        {
+            "name": "objects_path",
+            "type": "eta.core.types.DetectedObjects",
+            "description": "A JSON file containing the detected objects",
+            "required": false
+        }
+    ],
+    "outputs": [
+        {
+            "name": "output_path",
+            "type": "eta.core.types.VideoFile",
+            "description": "The labeled video",
+            "required": true
+        }
+    ],
+    "parameters": [
+        {
+            "name": "annotation_config",
+            "type": "eta.core.types.Config",
+            "description": "an eta.core.annotations.AnnotationConfig describing how to render the annotations on the video. If omitted, the default settings are used",
+            "required": false,
+            "default": null
+        }
+    ]
+}
