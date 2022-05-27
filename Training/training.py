@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 loss_list=[]
 
 
+
 #TRAINING LOOP
 def train_loop(n_epochs, optimizer, model, loss_fn, train_loader):
     for epoch in range(n_epochs):
@@ -15,9 +16,10 @@ def train_loop(n_epochs, optimizer, model, loss_fn, train_loader):
             optimizer.zero_grad()
             imgs=imgs.cuda()
             model=model.cuda()
+            labels=labels.cuda()
             t_out_train=model(imgs)
             loss_train=loss_fn(t_out_train, labels)
-            loss_list.append(loss_train)
+            loss_list.append(loss_train.cpu().item())
             loss_train.backward()
             optimizer.step()
         if epoch == 1 or epoch % 10 == 0:

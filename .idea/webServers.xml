@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="0272d6e9-981d-4a84-84d4-0e9208f90ab9" name="AimageLab">
+      <webServer id="e4f47c51-d688-43a9-83e9-b91ff20dde43" name="NN">
         <fileTransfer rootFolder="/homes/asaporita" accessType="SFTP" host="aimagelab-srv-00.ing.unimore.it" port="22" sshConfigId="6a01337d-7f3a-48ec-a79c-1825638f639f" sshConfig="asaporita@aimagelab-srv-00.ing.unimore.it:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
